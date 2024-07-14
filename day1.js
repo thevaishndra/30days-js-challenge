@@ -28,9 +28,9 @@ let e = ["mercury", "venus", "earth", "mars", "jupiter"];
 //Reassigning Variables
 let initialValue = 67;
 // let initialValue = 68; -> this is not allowed
-// console.log(initialValue);
+ console.log(initialValue);
 initialValue = 70;
-// console.log(initialValue);
+ console.log(initialValue);
 //we can reassign values using let
 
 //Understanding Const
