@@ -60,7 +60,28 @@ console.log(`Happy Birthday! ${name} You turned ${age} today. May god bless you`
 }
 console.log(greetings("Varun"));
 
-//Higher order functions
+//Higher order functions ->returns another function or can pass another function as an argument
 //takes the function and number, and calls that function many times
+function higherOrderFunc(callback , a){
+    for (let i = 1; i <= a; i++){
+        callback();
+    }
+}
+function callbackFunc() {
+    console.log("Callback function is executed.");
+}
+higherOrderFunc(callbackFunc, 2);
 
 //takes 2 function and value, applies first function to value and second function to result
+function higherOrderFunction(func1, func2, val){
+    const result1 = func1(val);
+    const result2 = func2(result1);
+    return result2;
+}
+function func1(val) {
+    return val + 2;
+}
+function func2(val) {
+    return val + 3;
+}
+console.log(higherOrderFunction(func1, func2, 2));
