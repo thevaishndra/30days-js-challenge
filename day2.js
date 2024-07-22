@@ -1,3 +1,5 @@
+//Operators
+
 //Arithmetic operators
 let num1 = 5;
 let num2 = 7;

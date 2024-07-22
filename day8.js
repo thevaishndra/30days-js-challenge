@@ -1,3 +1,5 @@
+//ES6 Features
+
 //Template Literals
 //create a string that includes variables for a person's name and age and log the string to console
 let name = "Vaishnavi";

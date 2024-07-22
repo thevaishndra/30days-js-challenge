@@ -1,3 +1,5 @@
+//Variables and Data types
+
 //Variable declaration
 var number = 19;
 // console.log(number);

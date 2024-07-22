@@ -1,3 +1,5 @@
+//Arrays
+
 //Array creation & access
 //create array of no.s from 1 - 5
 let numbers = [1, 2, 3, 4, 5];

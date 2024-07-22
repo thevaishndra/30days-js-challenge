@@ -1,3 +1,5 @@
+//Functions
+
 //Function declaration
 //check if a no. is odd or even
 function checkNum(n){
