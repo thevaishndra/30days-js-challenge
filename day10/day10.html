@@ -9,6 +9,9 @@
             background-color:yellow;
 
         }
+        .list {
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -18,10 +21,38 @@
         <button class="change-btn">Click</button>
         <img src="image.png" class="image">
     </div>
+
     <div>
     <input type="text" placeholder="type here" class="input">
     <p class="para"></p>
     </div>
+
+    <form class="form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <button class="submit">Submit</button>
+    </form>
+
+    <h3>Select Your Favorite Way Of Escapism</h3>
+    <select class ="dropdown">
+      <option value="sleeping">Sleeping</option>
+      <option value="movies">Movies</option>
+      <option value="books">Books</option>
+      <option value="songs">Songs</option>
+    </select>
+    <p class="display">Selected value: None</p>
+
+    <h3>Fav Movies of SRK</h3>
+            <ul class="list">
+                <li>Phir Bhi Dil Hai Hindustani</li>
+                <li>Om Shanti Om</li>
+                <li>Devdas</li>
+            </ul>
+
+    <h3>Event Delegation with Dynamically Added Elements</h3>
+            <button class="addItemButton">Add List Item</button>
+            <ul class="itemList"></ul>
+
     <script src="day10.js"></script>
 </body>
 </html>

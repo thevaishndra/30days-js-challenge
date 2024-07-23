@@ -35,9 +35,49 @@ document.querySelector(".input").addEventListener("keydown", () => {
  });
 
  //Form Events
- //add a submit event listener to a form that prevents the default submissionand logs the data to console
+ //add a submit event listener to a form that prevents the default submission and logs the data to console
+const form = document.querySelector(".form");
+
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(form);
+    formData.forEach((value, key) => {
+        console.log(`${key}: ${value}`);
+    });
+});
+
  //add a change event listener to a select dropdown that displays the selected value in a paragraph
+const select = document.querySelector(".dropdown");
+const displayValue = document.querySelector(".display");
+
+select.addEventListener("change", () => {
+    const selectedValue = select.value;
+    displayValue.textContent = `Selected value: ${selectedValue}`;
+});
 
  //Event Delagation
  //add a click event listener to a list that logs the text content of the clicked list item using event delegation
+ const selectedItem = document.querySelector(".list");
+ selectedItem.addEventListener("click", (event) => {
+    if (event.target && event.target.nodeName === "LI"){
+    console.log(`Selected item: ${event.target.textContent}`);
+}
+ });
+
  //add a event listener to a parent element that listens for events from dynamically added child elements 
+ const addItemButton = document.querySelector(".addItemButton");
+ const itemList = document.querySelector(".itemList");
+
+ const addItem = () => {
+    const newItem = document.createElement("li");
+    newItem.textContent = `Item: ${itemList.children.length + 1}`;
+    itemList.appendChild(newItem);
+ }
+ addItemButton.addEventListener("click", addItem);
+
+ itemList.addEventListener("click", (event) => {
+    if (event.target && event.target.nodeName === "LI") {
+      console.log(`Clicked item: ${event.target.textContent}`);
+    }
+});
